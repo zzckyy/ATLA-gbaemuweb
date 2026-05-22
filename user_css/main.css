@@ -19,7 +19,7 @@ body{
     background-color: black;
     border-radius: 16px;
 
-    margin-top: 48px;
+    margin-top: 4rem;
 }
 
 .control-layout{
@@ -52,7 +52,7 @@ body{
 }
 
 .pauseSelect{
-    margin-top: 48px;
+    margin-block: 48px;
 }
 
 .pauseSelect button{
@@ -62,3 +62,49 @@ body{
     aspect-ratio: 1/1;
 }
 
+.controller{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controller button{
+    width: 40px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    border: none;
+}
+
+.controller .dpad{
+    /* background-color: aquamarine; */
+    width: 40%;
+}
+
+.controller .dpad .horizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* gap: 3rem; */
+}
+
+.vertical{
+    margin-left: 37px;
+}
+
+.menu{
+    bottom: 3rem;
+    position: fixed;
+
+    border: none;
+
+}
+
+button{
+    padding: 4px;
+    border: none;
+    box-shadow: 4px 4px 12px rgb(27, 8, 59);
+
+    border-radius: 48px;
+}
