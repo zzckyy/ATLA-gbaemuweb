@@ -68,37 +68,57 @@
     <link rel="stylesheet" href="user_css/main.css" />
   </head>
   <body>
-    <div class="app" id="emulator-target">
+    <div class="app" id="">
       <canvas class="canvas" id="emulator_target"></canvas>
 
       <div class="control-layout">
         <div class="trigger">
-          <button>L</button>
-          <button>R</button>
+          <button id="touch-l">L</button>
+          <button id="touch-r">R</button>
         </div>
 
         <div class="pauseSelect">
-          <button>S</button>
-          <button>P</button>
+          <button id="touch-select">S</button>
+          <button id="touch-start">P</button>
         </div>
 
         <div class="controller">
           <div class="dpad">
-            <button class="vertical">ATS</button>
+            <button id="touch-up" class="vertical">ATS</button>
             <div class="horizontal">
-              <button>KR</button>
-              <button>KN</button>
+              <button id="touch-left">KR</button>
+              <button id="touch-right">KN</button>
             </div>
-            <button class="vertical">BWH</button>
+            <button id="touch-down" class="vertical">BWH</button>
           </div>
 
           <div class="action">
-            <button>B</button>
-            <button>A</button>
+            <button id="touch-a">B</button>
+            <button id="touch-b">A</button>
           </div>
         </div>
 
-        <button class="menu">Menu</button>
+        <button id="menu-toggle-desktop" class="menu">Menu</button>
+
+        <span class="message" id="tempMessage"></span>
+      </div>
+
+      <div id="menu" class="paused menu-dropdown">
+        <div class="menu" id="menu_top">
+        <li>
+          File
+          <ul>
+            <li>
+              <span>BIOS: </span>
+              <input type="file" id="bios_load" class="files" />
+            </li>
+            <li>
+              <span>Game: </span>
+              <input type="file" id="rom_load" class="files" />
+            </li>
+            <button id="play" class="show">Play</button>
+          </ul>
+        </li>
       </div>
     </div>
   </body>
